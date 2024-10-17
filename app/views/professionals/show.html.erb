@@ -1,0 +1,7 @@
+<h1><%= @professional.name %></h1>
+
+<p>Email: <%= @professional.email %></p>
+<p>Specialization: <%= @professional.specialization %></p>
+
+<%= link_to 'Edit', edit_professional_path(@professional) %> |
+<%= link_to 'Back', professionals_path %>
