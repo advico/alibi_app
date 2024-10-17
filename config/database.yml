@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost  # Descomentei o host para garantir que se conecte ao servidor local
+  port: 5432       # Garantir que está usando a porta correta
+
+development:
+  <<: *default
+  database: app_alibi_development
+  username: advico  # Substitua 'seu_usuario' pelo seu usuário do PostgreSQL
+  password: Adrian9    # Substitua 'sua_senha' pela sua senha do PostgreSQL
+
+test:
+  <<: *default
+  database: app_alibi_test
+  username: advico  # Mesmo usuário para o ambiente de testes
+  password: Adrian9    # Mesma senha para o ambiente de testes
+
+production:
+  <<: *default
+  database: app_alibi_production
+  username: app_alibi
+  password: <%= ENV["APP_ALIBI_DATABASE_PASSWORD"] %>  # Usar variáveis de ambiente no ambiente de produção
