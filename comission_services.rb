@@ -4,7 +4,7 @@ class CommissionService
   end
 
   def calculate_commission
-      #calcula comissão
+      
   end
 end
 
