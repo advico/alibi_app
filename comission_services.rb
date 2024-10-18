@@ -4,6 +4,7 @@ class CommissionService
   end
 
   def calculate_commission
-    # Lógica de cálculo da comissão
+    # Lógica de cálculo da comissão.
   end
 end
+
